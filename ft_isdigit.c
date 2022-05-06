@@ -6,19 +6,13 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 10:52:57 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/06 11:55:49 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/06 14:50:04 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(char c)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (1);
-	}
-	return (0);
+	if (c < '0' || c > '9')
+		return (0);
+	return (2048);
 }

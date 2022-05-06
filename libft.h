@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 08:39:43 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/06 11:56:57 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/06 14:16:38 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 #define LIBFT_H
 
 int	ft_isalpha(char *str);
-int ft_isdigit(char *str);
+int	ft_isdigit(char c);
 
 #endif
