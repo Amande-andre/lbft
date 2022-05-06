@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 08:39:43 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/06 15:13:40 by anmande          ###   ########.fr       */
+/*   Created: 2022/05/06 15:11:00 by anmande           #+#    #+#             */
+/*   Updated: 2022/05/06 15:14:00 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+int ft_isalnum(char *str)
+{
+	int	i;
 
-int	ft_isalpha(char *str);
-int	ft_isdigit(char c);
-int ft_isalnum(char *str);
-
-#endif
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (1);
+		i++;
+	}
+	return (0);
+}

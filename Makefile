@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/06 13:39:47 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/06 15:14:29 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRC =	main.c \
 		ft_isalpha.c \
-		ft_isdigit.c
+		ft_isdigit.c \
+		ft_isalnum.c
 
 OBJ = ${SRC:.c=.o}
 

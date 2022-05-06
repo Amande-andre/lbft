@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:00:28 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/06 14:52:25 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/06 15:20:14 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,24 @@ int     main()
 		printf("%d", ft_isalpha("25"));
         printf("%d\n", ft_isalpha("25"));
         printf("\n");
-		//------------>ft_isdigit<..............//
+		//------------>ft_isdigit<------------//
 		printf("%d", ft_isdigit('0'));
         printf("%d\n", isdigit('0'));
         printf("%d", ft_isdigit('1'));
         printf("%d\n", isdigit('1'));
-		printf("%d", ft_isdigit('2'));
-        printf("%d\n", isdigit('2'));
-		printf("%d\n", ft_isdigit('3'));
-        printf("%d\n", isdigit('3'));
-		printf("%d", ft_isdigit('4'));
-        printf("%d\n", isdigit('4'));
-        printf("%d", ft_isdigit('5'));
-        printf("%d\n", isdigit('5'));
-		printf("%d", ft_isdigit('6'));
-        printf("%d\n", isdigit('6'));
-		printf("%d\n", ft_isdigit('7'));
-        printf("%d\n", isdigit('7'));
-        printf("%d", ft_isdigit('8'));
-        printf("%d\n", isdigit('8'));
-		printf("%d", ft_isdigit('9'));
-        printf("%d\n", isdigit('9'));
-		printf("%d\n", ft_isdigit('q'));
+		printf("%d", ft_isdigit('q'));
         printf("%d\n", isdigit('q'));
+        printf("\n");
+		//------------>ft_isdigit<-----------//
+		printf("%d", ft_isalnum(""));
+        printf("%d\n", ft_isalnum(""));
+		printf("%d", ft_isalnum("2566"));
+        printf("%d\n", ft_isalnum("2566"));
+		printf("%d", ft_isalnum("-55"));
+        printf("%d\n", ft_isalnum("-55"));
+		printf("%d", ft_isalnum("t"));
+        printf("%d\n", ft_isalnum("t"));
+		printf("%d", ft_isalnum(" "));
+        printf("%d\n", ft_isalnum(" "));
         return (0);
 }
