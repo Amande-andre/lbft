@@ -6,20 +6,14 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 15:11:00 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/06 15:14:00 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/06 16:42:17 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(char *str)
+int ft_isalnum(int num)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (1);
-		i++;
-	}
+	if ((num >= '0' && num <= '9') || ((num >= 'A' && num <= 'Z')
+			|| (num >= 'a' && num <= 'z')))
+		return (8);
 	return (0);
 }
