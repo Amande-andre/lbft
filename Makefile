@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/07 11:58:35 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/07 13:24:01 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRC =	main.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
 		ft_isascii.c \
+		ft_isprint.c \
+		ft_strlen.c \
 
 OBJ = ${SRC:.c=.o}
 

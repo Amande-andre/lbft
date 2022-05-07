@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:00:28 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/07 12:18:51 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/07 13:26:03 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int     main()
 		printf("%d ", ft_isascii(128));
 		printf("%d\n", isascii(128));
 		//------------>ft_print<-----------//
-	/*int print = 0;
+	*/int print = 0;
 	while (print < 150)
 	{
 		printf("%d ", ft_isprint(print));
@@ -72,10 +72,16 @@ int     main()
 		printf("%d\n", print);
 		print++;
 	}
-	*/
+	
 
 		//------------------------------------------------------------------//
 		//------------------------------------------------------------------//
+		printf("%d ", ft_strlen("1023456789"));
+		printf("%d\n", strlen("1023456789"));
+		printf("%d ", ft_strlen(""));
+		printf("%d\n", strlen(""));
+		printf("%d ", ft_strlen("ceci est une test \n pour voir"));
+		printf("%d\n", strlen("ceci est un test \n pour voir"));
 		
-        return (0);
+		return (0);
 }
