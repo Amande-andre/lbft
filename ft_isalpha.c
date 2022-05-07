@@ -6,14 +6,14 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 08:10:49 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/06 16:41:45 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/07 11:30:17 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int num)
+int	ft_isalpha(int c)
 {
-	if ((num >= 'A' && num <= 'Z')
-			|| (num >= 'a' && num <= 'z'))
+	if ((c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z'))
 	{
 		return (1024);
 	}
