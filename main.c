@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:00:28 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/07 18:48:34 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/08 15:10:15 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,7 @@ int     main()
 		printf("%d ", isprint(print));
 		printf("%d\n", print);
 		print++;
-	}
-	
-	*/	
+	}	
 		//------------------------------------------------------------------//
 		//------------------------------------------------------------------//
 		
@@ -93,14 +91,18 @@ int     main()
 		printf("%zu ", ft_strlen("ceci est un test \n pour voir"));
 		printf("%zu\n", strlen("ceci est un test \n pour voir"));
 		//------------>ft_memset<-----------//
-	char *tmp = "123456789";
-	char *str = strdup(tmp);
-
-	char *i = ft_memset(str, 'p', 25);
-	char *i2 = memset(str, 'p', 25);
-	printf("%s\n%s\n", i, i2);
-		
-		
+		printf("\nft_memset\n");
+	char *tmpmemset = "123456789";
+	char *strmemset = strdup(tmpmemset);
+	char *imemset = ft_memset(strmemset, 'p', 25);
+	char *i2memset = memset(strmemset, 'p', 25);
+	printf("%s\n%s\n", imemset, i2memset);
+*/
+		//------------>ft_bzero<-----------//
+		printf("\nft_bzero\n");
+	char tmpbz[11] = "0123456789";
+	ft_bzero(tmpbz, 5);
+	printf("%c\n", tmpbz[0]);
 		
 		
 		

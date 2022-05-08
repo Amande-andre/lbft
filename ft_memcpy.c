@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/07 13:07:12 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/08 15:18:27 by anmande          ###   ########.fr       */
+/*   Created: 2022/05/08 15:12:20 by anmande           #+#    #+#             */
+/*   Updated: 2022/05/08 15:12:33 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
+void *ft_memcpy(void *dest, const void *src, size_t n);
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	
 }

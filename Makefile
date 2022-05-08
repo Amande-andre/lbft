@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/07 16:02:18 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/08 15:12:53 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,9 @@ SRC =	main.c \
 		ft_isprint.c \
 		ft_strlen.c \
 		ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		
 
 OBJ = ${SRC:.c=.o}
 
