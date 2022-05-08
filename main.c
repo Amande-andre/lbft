@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:00:28 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/08 15:10:15 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/08 15:30:12 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,12 @@ int     main()
 		//------------>ft_bzero<-----------//
 		printf("\nft_bzero\n");
 	char tmpbz[11] = "0123456789";
-	ft_bzero(tmpbz, 5);
-	printf("%c\n", tmpbz[0]);
-		
+	char *ibz = strdup(tmpbz);
+	char *i2bz = strdup(tmpbz);
+	ft_bzero(ibz, 5);
+	bzero(i2bz, 5);
+	printf("%s\n%s\n", ibz, i2bz);
+		//------------>ft_memcpy<-----------//
 		
 		
 		
