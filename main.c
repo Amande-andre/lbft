@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:00:28 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/09 12:07:18 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/09 16:24:36 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int     main()
 		printf("%zu ", ft_strlen("ceci est un test \n pour voir"));
 		printf("%zu\n", strlen("ceci est un test \n pour voir"));
 		//------------>ft_memset<-----------//
-*/
+
 		printf("\nft_memset\n");
 	char tmpmemset[11] = "1234567890";
 	char *strmemset = strdup(tmpmemset);
@@ -100,7 +100,7 @@ int     main()
 	printf("%s\n%s\n", imemset, i2memset);
 
 		//------------>ft_bzero<-----------//
-/*		printf("\nft_bzero\n");
+	printf("\nft_bzero\n");
 	char tmpbz[11] = "0123456789";
 	char *ibz = strdup(tmpbz);
 	char *i2bz = strdup(tmpbz);
@@ -108,17 +108,30 @@ int     main()
 	bzero(i2bz, 5);
 	printf("%s\n%s\n", ibz, i2bz);
 		//------------>ft_memmove<-----------//
-		char srctmmv[11] = "0123456789";
-		char destmmv[100] = "lshdgilsgdlgdligfsldgy";
-		char immv[100] = strdup(srctmmv);
-		char i2mmv[100] = strdup(srctmmv);
-		size_t size = sizeof(char);
-		ft_memmove(destmmv, immv, size * 5);
-		memmove(destmmv, i2mmv, size * 5);
-		printf("%s\n%s\n", immv,i2mmv);
-		
+	char	dest[] = "ofhf";
+	char	src[] = "0123456789";
+	size_t	size = sizeof (int);
+	char *tmp = strdup(dest);
+	char *tmp2 = strdup(dest);
+	char *i = ft_memmove(tmp, src, 10);
+	char *i2 = memmove(tmp2, src, 10);
+//	ft_memmove(i, src, 5);
+//	memmove(i2, src, 5);
+	printf("%s\n%s\n", i, i2);
+
+	char	dest[] = "qwertyuiop";
+	char	src[] = "0123456789";
+	size_t	size = sizeof (int);
+	char *tmp = strdup(dest);
+	char *tmp2 = strdup(dest);
+	char *i = ft_memcpy(tmp, src, 5);
+	char *i2 = memcpy(tmp2, src, 5);
+	printf("%s\n%s\n", i, i2);
+	free (tmp);
+	free (tmp2);
+
+
 */
-		
 		
 		return (0);
 }
