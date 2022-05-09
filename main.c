@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:00:28 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/08 15:30:12 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/09 12:07:18 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,23 +91,33 @@ int     main()
 		printf("%zu ", ft_strlen("ceci est un test \n pour voir"));
 		printf("%zu\n", strlen("ceci est un test \n pour voir"));
 		//------------>ft_memset<-----------//
-		printf("\nft_memset\n");
-	char *tmpmemset = "123456789";
-	char *strmemset = strdup(tmpmemset);
-	char *imemset = ft_memset(strmemset, 'p', 25);
-	char *i2memset = memset(strmemset, 'p', 25);
-	printf("%s\n%s\n", imemset, i2memset);
 */
+		printf("\nft_memset\n");
+	char tmpmemset[11] = "1234567890";
+	char *strmemset = strdup(tmpmemset);
+	char *imemset = ft_memset(strmemset, 'p', 1);
+	char *i2memset = memset(tmpmemset, 'p', 1);
+	printf("%s\n%s\n", imemset, i2memset);
+
 		//------------>ft_bzero<-----------//
-		printf("\nft_bzero\n");
+/*		printf("\nft_bzero\n");
 	char tmpbz[11] = "0123456789";
 	char *ibz = strdup(tmpbz);
 	char *i2bz = strdup(tmpbz);
 	ft_bzero(ibz, 5);
 	bzero(i2bz, 5);
 	printf("%s\n%s\n", ibz, i2bz);
-		//------------>ft_memcpy<-----------//
+		//------------>ft_memmove<-----------//
+		char srctmmv[11] = "0123456789";
+		char destmmv[100] = "lshdgilsgdlgdligfsldgy";
+		char immv[100] = strdup(srctmmv);
+		char i2mmv[100] = strdup(srctmmv);
+		size_t size = sizeof(char);
+		ft_memmove(destmmv, immv, size * 5);
+		memmove(destmmv, i2mmv, size * 5);
+		printf("%s\n%s\n", immv,i2mmv);
 		
+*/
 		
 		
 		return (0);
