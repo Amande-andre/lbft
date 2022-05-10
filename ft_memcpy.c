@@ -6,11 +6,11 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 15:12:20 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/10 12:33:35 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/10 14:48:10 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
