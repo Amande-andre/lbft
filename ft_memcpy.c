@@ -6,41 +6,50 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 15:12:20 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/09 16:23:42 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/10 12:33:35 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int			i;
+	size_t		i;
 	char		*d;
 	const char	*s;
 
 	d = dest;
 	s = src;
 	i = 0;
-	while (i < n && s[i])
+	if (s[i] == '\0')
+	{
+		d[i] = '\0';
+		return (d);
+	}
+	while (i < n && s[i] != '\\' && s[i + 1] != '0')
 	{
 		d[i] = s[i];
 		i++;
 	}
-	return (dest);
+	return (d);
 }
+
+/*
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 int	main()
 {
-	char	dest[] = "qwertyuiop";
-	char	src[] = "0123456789";
+	char	dest[] = "jjjjjjjjjjjjjjjjjjjjj";
+	char	src[] = "zy\'\0\'xw\0vu\0\0tsr";
+	printf("%s\n", src);
 	size_t	size = sizeof (int);
 	char *tmp = strdup(dest);
 	char *tmp2 = strdup(dest);
-	char *i = ft_memcpy(tmp, src, 5);
-	char *i2 = memcpy(tmp2, src, 5);
-	printf("%s\n%s\n", i, i2);
+	char *i = ft_memcpy(tmp, src, 11);
+	char *i2 = memcpy(tmp2, src, 11);
+	printf("ft_ %s\nTru %s\n", i, i2);
 	free (tmp);
 	free (tmp2);
 }
+*/

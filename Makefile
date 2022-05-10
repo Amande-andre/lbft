@@ -6,16 +6,18 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/09 09:45:51 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/10 11:46:15 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libft.a
 
 CC = clang
 
 CFLAGS = -Wall -Wextra -Werror 
 
-SRC =	main.c \
-		ft_isalpha.c \
+
+SRC =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
 		ft_isascii.c \
@@ -23,20 +25,18 @@ SRC =	main.c \
 		ft_strlen.c \
 		ft_memset.c \
 		ft_bzero.c \
-		#ft_memmove.c \
-		#ft_memcpy.c \
+		ft_memmove.c \
+		ft_memcpy.c \
 
 OBJ = ${SRC:.c=.o}
 
-NAME = libft
+all: ${NAME} test
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}: ${OBJ}
-	${CC} ${CFLAGS} ${OBJ} -o ${NAME} 
-
-all: ${NAME} 
+	ar rcs $(NAME) $(OBJ)
 
 clean: 
 	/bin/rm -f *.o
@@ -44,6 +44,13 @@ clean:
 fclean: clean
 	/bin/rm -f ${NAME}
 
-re: fclean all
+test: all
+	$(CC) $(CFLAGS) -c main.c
+	$(CC) $(CFLAGS) main.o -L . -lft -o exec
+
+re: fclean test
+
+tclean:
+	rm exec
 
 .PHONY: all clean fclean re
