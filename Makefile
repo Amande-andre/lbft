@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/10 18:49:07 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/11 10:47:37 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRC =	ft_isalpha.c \
 		ft_tolower.c \
 		ft_strchr.c \
 		ft_strrchr.c \
-		ft_strncmp.c \	
+		ft_strncmp.c 
 
 OBJ = ${SRC:.c=.o}
 
