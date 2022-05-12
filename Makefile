@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/12 11:38:10 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/12 14:23:01 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC =	ft_isalpha.c \
 		ft_memchr.c \
 		ft_memcmp.c \
 		ft_strnstr.c \
+		ft_atoi.c \
 		
 		
 
