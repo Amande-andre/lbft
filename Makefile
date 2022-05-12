@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/11 14:43:32 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/12 11:38:10 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,15 +34,16 @@ SRC =	ft_isalpha.c \
 		ft_strncmp.c \
 		ft_memchr.c \
 		ft_memcmp.c \
-
+		ft_strnstr.c \
+		
 		
 
 OBJ = ${SRC:.c=.o}
 
-all: ${NAME} test
+all: $(NAME) test
 
-${NAME}: ${OBJ}
-	ar rcs $(NAME) $(OBJ)
+$(NAME): ${OBJ}
+	ar -rcs ${NAME} ${OBJ}
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -51,13 +52,13 @@ clean:
 	/bin/rm -f *.o
 
 fclean: clean
-	/bin/rm -f ${NAME}
+	/bin/rm -f $(NAME)
 
 test: all
 	$(CC) $(CFLAGS) -c main.c
 	$(CC) $(CFLAGS) main.o -L . -lft -o exec
 
-re: fclean test
+re: fclean all test
 
 tclean:
 	rm exec

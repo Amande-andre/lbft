@@ -6,10 +6,54 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:57:46 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/11 15:06:37 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/12 13:18:34 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdio.h>
+#include <bsd/string.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	i;
+	size_t	j;
+	char	*b;
+	char	*l;
+
+	b = (char *)big;
+	l = (char *)little;
+	i = 0;
+	if (little[i] == '\0')
+		return (b);
+	while (b[i])
+	{
+		j = 0;
+		while (b[i] == l[j] && len > i && b[i])
+		{
+			if (l[j] == '\0')
+			{
+				while (j++ < len)
+					if (b[j] == '\0')
+						return (NULL);
+			}
+			return (b + i);
+			j++;
+			i++;
+		}
+		i -= j;
+		i++;
+	}
+	return (NULL);
+}
+
+
+int main()
+{
+	const char	*big = "lorem ipsum dolor sit amet";
+	const char	*little = "ipsum";
+	size_t	len = 15;
+	printf("%s\n", ft_strnstr(big, little, len));
+	printf("%s\n", strnstr(big, little, len));
+	return (0);
+}
