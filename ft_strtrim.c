@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 11:36:03 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/13 16:32:58 by anmande          ###   ########.fr       */
+/*   Created: 2022/05/13 18:01:50 by anmande           #+#    #+#             */
+/*   Updated: 2022/05/13 18:04:21 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	char	*str;
 
-	i = 0;
-	str = malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (NULL);
-	while (s[start] && i < len)
-	{
-		str[i] = s[start];
-		i++;
-		start++;
-	}
-	return (str);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	printf("%s\n", ft_substr("lorem ipsum dolor sit amet", 7, 10));
-	free(str);
-}
-*/

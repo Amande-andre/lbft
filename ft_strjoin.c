@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 11:36:03 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/13 16:32:58 by anmande          ###   ########.fr       */
+/*   Created: 2022/05/13 16:37:58 by anmande           #+#    #+#             */
+/*   Updated: 2022/05/13 18:03:12 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
 	char	*str;
+	size_t	lens1;
+	size_t	lens2;
 
-	i = 0;
-	str = malloc(sizeof(char) * len + 1);
+	if (!s1)
+		return (NULL);
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	str = ft_calloc(sizeof(char), lens1 + lens2 + 1);
 	if (!str)
 		return (NULL);
-	while (s[start] && i < len)
-	{
-		str[i] = s[start];
-		i++;
-		start++;
-	}
+	ft_memcpy(str, s1, lens1);
+	ft_memcpy(str + lens1, s2, lens2);
 	return (str);
 }
 
@@ -34,7 +35,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 #include <stdio.h>
 int main()
 {
-	printf("%s\n", ft_substr("lorem ipsum dolor sit amet", 7, 10));
-	free(str);
+	printf("%s\n", ft_strjoin("ceci", "est un test"));
 }
 */
