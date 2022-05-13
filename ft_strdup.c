@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/12 17:37:06 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/13 11:11:39 by anmande          ###   ########.fr       */
+/*   Created: 2022/05/13 10:51:09 by anmande           #+#    #+#             */
+/*   Updated: 2022/05/13 11:31:40 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strdup(const char *s)
 {
-	char	*s;
-	size_t	len;
-	size_t	i;
+	char	*cpy;
 
-	i = 0;
-	len = nmemb * (size + 1);
-	s = malloc (len);
-	if (s == NULL)
+	cpy = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (cpy == NULL)
 		return (NULL);
-	ft_bzero(s, size);
-	return (s);
+	ft_memcpy(cpy, s, (ft_strlen(s) + 1));
+	return (cpy);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	char	*str = "ceci est un test";
+	char	*ret = ft_strdup(str);
+	printf("%lu", sizeof(char));
+	free(ret);
+}
+*/
