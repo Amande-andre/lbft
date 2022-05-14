@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:09:59 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/10 18:43:40 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/14 12:21:15 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,15 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	if (s[i + 1] == c)
-	{
-		s = s + i + 1;
-		return ((char *)s);
-	}
-	while (i >= 0)
+	i = ft_strlen(s);
+	if (s[i] == c)
+		return ((char *)s + i);
+	while (i-- >= 0)
 	{
 		if (s[i] == c)
-		{
-			s = s + i;
-			return ((char *)s);
-		}	
-		i--;
+			return ((char *)s + i);
 	}
-	return ((void *)s);
+	return (NULL);
 }
 
 /*

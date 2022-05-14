@@ -6,11 +6,11 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:08:49 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/11 14:56:50 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/14 12:14:00 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -19,17 +19,26 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	p = (void *)s;
+	c = (unsigned char)c;
 	while (p[i] && i < n)
 	{
 		if (p[i] == c)
-			return (p);
-		p++;
+			return (p + i);
+		i++;
 	}
-	i++;
-	if (p[i] == c)
-	{
-		p++;
-		return (p);
-	}
-	return (p);
+	if (p[i] == c && c == '\0')
+		return (p + i);
+	return (NULL);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	const void *s = "bonjourno";
+	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
+
+	printf("%s\n", (char *)ft_memchr(tab, -1, 7));
+	printf("%s\n", (char *)memchr(s, -1, 7));
+}
+*/
