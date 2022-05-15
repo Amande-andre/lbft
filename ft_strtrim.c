@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:01:50 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/15 12:25:55 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/15 14:11:38 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (cpy);
 }
 
-
+/*
 int main()
 {
 	const char * s1 = "			";
 	const char *set = "\t \n";
 	printf("%s\n", ft_strtrim(s1, set));
 }
+*/
