@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 15:14:57 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/15 13:51:58 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/15 15:10:31 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		d[n] = '\0';
 	ft_memcpy(d, s, n);
 	ft_memcpy(dest, d, n);
+	free (d);
 	return (dest);
 }
 

@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:36:03 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/13 16:32:58 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/15 16:40:29 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	i = 0;
-	str = malloc(sizeof(char) * len + 1);
+	str = ft_calloc(sizeof(char), len);
 	if (!str)
 		return (NULL);
 	while (s[start] && i < len)
