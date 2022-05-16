@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:39:15 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/16 16:38:02 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/16 18:40:32 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,15 +79,17 @@ char	**ft_split(char const *s, char c)
 		while (s[j] == c && s[j])
 			j++;
 		splited[i] = ft_substr(s, j, tab[i] - 1);
-		splited[tab[i] - 1] = '\0';
-		printf("%d\n", tab[i]);
+		splited[tab[i] - 1] = 0;
 		i++;
 		while (s[j] != c  && s[j])
 			j++;
 	}
+	splited[i] = NULL;
+	free (tab);
 	return (splited);
 }
 
+/*
 int main()
 {
 	char	s[] = "123a456a789a";
@@ -101,3 +103,4 @@ int main()
 		i++;
 	} 
 }
+*/
