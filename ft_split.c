@@ -5,43 +5,99 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/15 15:05:16 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/16 11:11:23 by anmande          ###   ########.fr       */
+/*   Created: 2022/05/16 14:39:15 by anmande           #+#    #+#             */
+/*   Updated: 2022/05/16 16:38:02 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	**ft_split(char const *s, char c)
+static int	ft_nbword(const char *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	char	**splited;
-	int		len;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
-	len = ft_strlen(s);
-	s = (char *)s;
-	while (s[i++])
+	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] == c && s[i])
+			i++;
+		if (s[i] != c && s[i])
 		{
-			ft_memcpy(splited[j++], ft_substr(s, 0, i), i);
+			while (s[i] != c && s[i])
+				i++;
+			j++;
 		}
 	}
-	printf("%s\n", splited[0]);
-	printf("%s\n", splited[1]);
-	printf("%s\n", splited[2]);
-	printf("%s\n", splited[3]);
-	printf("%s\n", splited[4]);
+	return (j + 1);
 }
 
-#include <stdio.h>
+static void	ft_lenword(int *tab, const char *s, char c)
+{
+	int	i;
+	int	j;
+	int	k;
+
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] == c && s[i])
+			i++;
+		k = 1;
+		if (s[i] != c && s[i])
+		{
+			while (s[i] != c && s[i])
+			{
+				k++;
+				i++;
+			}
+			tab[j] = k;
+			j++;
+		}
+	}
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**splited;
+	int		i;
+	int		j;
+	int		nbw;
+	int		*tab;
+
+	i = 0;
+	j = 0;
+	nbw = ft_nbword(s, c);
+	tab = ft_calloc(sizeof(int), nbw);
+	splited = ft_calloc(sizeof(char), nbw);
+	ft_lenword(tab, s, c);
+	while (i < nbw - 1)
+	{
+		while (s[j] == c && s[j])
+			j++;
+		splited[i] = ft_substr(s, j, tab[i] - 1);
+		splited[tab[i] - 1] = '\0';
+		printf("%d\n", tab[i]);
+		i++;
+		while (s[j] != c  && s[j])
+			j++;
+	}
+	return (splited);
+}
+
 int main()
 {
-	char	*s = "012a456a891abcdaefghij";
-	char	c = "a";
-	int		i = 0;
-	ft_split(s, c);
+	char	s[] = "123a456a789a";
+	char	c = 'a';
+	char **result;
+	int i = 0;
+	result = ft_split(s, c);
+	while (i < ft_nbword(s, c) - 1)
+	{
+		printf("%s\n", result[i]);
+		i++;
+	} 
 }
