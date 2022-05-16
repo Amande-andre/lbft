@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 15:05:16 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/15 17:38:59 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/16 11:11:23 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	char	*splited;
+	char	**splited;
 	int		len;
 
 	i = 0;
 	j = 0;
 	len = ft_strlen(s);
-	splited = ft_calloc(sizeof(char), ft_strlen(s));
 	s = (char *)s;
 	while (s[i++])
 	{

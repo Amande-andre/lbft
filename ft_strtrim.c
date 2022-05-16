@@ -6,27 +6,24 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:01:50 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/15 15:03:06 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/16 12:31:01 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-
-int	ft_cmp(const char s1, const char *set)
+/*
+static int	ft_cmp(const char s1, const char *set)
 {
 	size_t	i;
 
 	i = 0;
 	while (set[i] != '\0')
-	{
-		if (set[i] == s1) 
+		if (set[i++] == s1) 
 			return (1);
-		i++;
-	}
 	return (0);
 }
-
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
@@ -35,21 +32,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1) - 1;
-	while (ft_cmp(s1[i], set) == 1 && s1[i])
+	while (ft_strchr(set, s1[i]) && s1[i])
 		i++;
-	while (ft_cmp(s1[j], set) == 1)
+	while (ft_strchr(set, s1[j]) && j > i)
 		j--;
 	s1 = (char *)s1 + i;
-	cpy = calloc(sizeof(char), (j - i) + 1);
+	//printf("%i %i ft_calloc(%zu, %i)", j, i, sizeof(char), (j - i) + 1);
+	cpy = ft_calloc(sizeof(char), (j - i) + 1);
 	ft_memcpy(cpy, s1, j - i + 1);
+	//cpy = NULL;
 	return (cpy);
 }
 
-/*
+
 int main()
 {
-	const char * s1 = "			";
-	const char *set = "\t \n";
-	printf("%s\n", ft_strtrim(s1, set));
+	const char * s1 = "	 		";
+	const char *set = " \n\t";
+	//ft_strtrim(s1, set);
+	char* str = ft_strtrim(s1, set);
+	printf("%s\n", str);
+	free(str);
 }
-*/

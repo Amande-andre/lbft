@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 17:37:06 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/15 15:21:58 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/16 11:46:16 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	i;
 
 	i = 0;
-	len = nmemb * size + 1;
+	len = nmemb * size;
 	s = malloc (len);
 	if (s == NULL)
 		return (NULL);
