@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/16 17:39:36 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/17 15:19:45 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = clang
 
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror
 
 
 SRC =	ft_isalpha.c \
@@ -42,7 +42,7 @@ SRC =	ft_isalpha.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
-		ft_strlcpy.c \
+#		ft_strlcpy.c \
 		
 		
 OBJ = ${SRC:.c=.o}
