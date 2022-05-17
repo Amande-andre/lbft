@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:39:15 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/17 16:25:40 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/17 19:28:18 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,8 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[j] == c && s[j])
 			j++;
-		splited[i] = ft_substr(s, j, tab[i] - 1);
+		splited[i] = ft_substr(s, j, tab[i]);
+		splited[i][tab[i] - 1] = '\0';
 		while (s[j] != c  && s[j])
 			j++;
 		i++;
@@ -88,7 +89,7 @@ char	**ft_split(char const *s, char c)
 	return (splited);
 }
 
-
+/*
 int main()
 {
 	char	s[] = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.";
@@ -105,3 +106,4 @@ int main()
 		i++;
 	} 
 }
+*/

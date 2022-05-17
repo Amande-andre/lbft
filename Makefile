@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/17 15:19:45 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/17 17:56:42 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ SRC =	ft_isalpha.c \
 		
 OBJ = ${SRC:.c=.o}
 
-all: $(NAME) test
+all: $(NAME) #test
 
 $(NAME): ${OBJ}
 	ar -rcs ${NAME} ${OBJ}
@@ -61,11 +61,11 @@ clean:
 fclean: clean
 	/bin/rm -f $(NAME)
 
-test: all
-	$(CC) $(CFLAGS) -c main.c
-	$(CC) $(CFLAGS) main.o -L . -lft -o exec
+#test: all
+#	$(CC) $(CFLAGS) -c main.c
+#	$(CC) $(CFLAGS) main.o -L . -lft -o exec
 
-re: fclean all test
+re: fclean all #test
 
 tclean:
 	rm exec
