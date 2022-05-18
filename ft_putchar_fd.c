@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/07 16:02:39 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/18 11:59:08 by anmande          ###   ########.fr       */
+/*   Created: 2022/05/18 10:57:29 by anmande           #+#    #+#             */
+/*   Updated: 2022/05/18 11:00:29 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	char	*p;
-
-	i = 0;
-	p = s;
-	while (i < n)
-	{
-		p[i] = c;
-		i++;
-	}
-	return (s);
+	write(fd, &c, 1);
 }
-
-/*
-int main()
-{
-			printf("\nft_memset\n");
-	char tmpmemset[11] = "1234567890";
-	char *strmemset = strdup(tmpmemset);
-	char *imemset = ft_memset(strmemset, 'p', 1);
-	char *i2memset = memset(tmpmemset, 'p', 1);
-	printf("%s\n%s\n", imemset, i2memset);
-}
-*/

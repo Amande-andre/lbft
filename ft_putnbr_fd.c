@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/07 16:02:39 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/18 11:59:08 by anmande          ###   ########.fr       */
+/*   Created: 2022/05/18 11:44:24 by anmande           #+#    #+#             */
+/*   Updated: 2022/05/18 13:09:52 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	char	*p;
+	size_t	nb;
 
-	i = 0;
-	p = s;
-	while (i < n)
+	nb = n;
+	if (n < 0)
 	{
-		p[i] = c;
-		i++;
+		nb *= - 1;
+		ft_putchar_fd('-', fd);
+	}	
+	if (nb >= 0 && nb <= 9)
+		ft_putchar_fd(nb + '0', fd);
+	if (nb >= 10)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
 	}
-	return (s);
 }
 
-/*
-int main()
-{
-			printf("\nft_memset\n");
-	char tmpmemset[11] = "1234567890";
-	char *strmemset = strdup(tmpmemset);
-	char *imemset = ft_memset(strmemset, 'p', 1);
-	char *i2memset = memset(tmpmemset, 'p', 1);
-	printf("%s\n%s\n", imemset, i2memset);
-}
-*/
+
+// #include <stdio.h>
+// int main(int ac, char **av)
+// {
+// 	(void)ac;
+// 	int n = ft_atoi(av[1]);
+// 	ft_putnbr_fd(n, 0);
+// }
