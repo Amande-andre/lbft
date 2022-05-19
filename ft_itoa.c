@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:14:10 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/19 09:53:31 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/19 14:47:07 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 	}
 	else
 		nb = n;
-	while (nb > 10)
+	while (nb >= 10)
 	{
 		nb = nb / 10;
 		i++;
@@ -66,12 +66,10 @@ char	*ft_itoa(int n)
 	return (a);
 }
 
+// #include <stdio.h>
 // int main(int ac, char **av)
 // {
 // 	(void)ac;
-// 	for (int i = INT_MIN ; i < INT_MAX ; i++)
-// 	{
-// 		ft_itoa(i);
-// 	}
-// 	printf("EEEEEEEEEEEEEEEND\n");
+// 	int	n = ft_atoi(av[1]);
+// 	printf("%s\n", ft_itoa(n));
 // }
