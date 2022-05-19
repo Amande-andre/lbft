@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/18 13:17:26 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/19 10:40:38 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,8 @@ SRC =	ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
 #		ft_strlcpy.c \
 
 		

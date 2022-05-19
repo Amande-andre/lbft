@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:36:03 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/17 19:28:14 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/19 10:36:22 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*str;
-	
+
 	i = 0;
 	if (!s || len <= 0)
 		return (ft_strdup(""));
 	if (start > (unsigned int)ft_strlen(s))
 		return (ft_strdup(""));
-	str = (char*)ft_calloc(sizeof(char) + 1, len);
-	if (!str) 
+	str = (char *)ft_calloc(sizeof(char) + 1, len);
+	if (!str)
 		return (NULL);
 	while (s[start] && i < len)
 	{
@@ -34,7 +34,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-
 
 // #include <stdio.h>
 // int main()

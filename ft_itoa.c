@@ -6,12 +6,11 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:14:10 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/18 16:19:01 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/19 09:53:31 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_putnbr(long int n, size_t size)
 {
@@ -67,11 +66,12 @@ char	*ft_itoa(int n)
 	return (a);
 }
 
-int main(int ac, char **av)
-{
-	(void)ac;
-	int n = ft_atoi(av[1]);
-	char *p = ft_itoa(n);
-	printf("%s", p);
-	free (p);
-}
+// int main(int ac, char **av)
+// {
+// 	(void)ac;
+// 	for (int i = INT_MIN ; i < INT_MAX ; i++)
+// 	{
+// 		ft_itoa(i);
+// 	}
+// 	printf("EEEEEEEEEEEEEEEND\n");
+// }
