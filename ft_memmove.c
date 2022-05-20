@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 15:14:57 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/15 15:10:31 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/20 14:46:17 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char		*d;
 
 	s = src;
-	d = ft_calloc(sizeof(char), ft_strlen(src));
+	d = (char *)malloc((sizeof(char *) * ft_strlen(src)) + 1);
+	if (!d)
+		return (NULL);
 	if (n == 0)
 		d[n] = '\0';
 	ft_memcpy(d, s, n);
