@@ -6,23 +6,25 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:23:44 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/16 17:45:18 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/20 12:12:22 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	ft_memcpy(dst, src, size);
-	return (ft_strlen(src));
-}
+	size_t	i;
 
-/*
-int	main()
-{
-	char *dest = "cecieest ine teste";
-	printf("%zu", ft_strlcpy(dest, "juste un", 5));
+	i = 0;
+	while (i < size - 1 && src[i] && size != 0)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	if (i < size)
+		dst[i] = '\0';
+	while (src[i])
+		i++;
+	return (i);
 }
-*/

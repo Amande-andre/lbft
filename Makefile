@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/19 10:40:38 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/20 12:08:10 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,8 @@ SRC =	ft_isalpha.c \
 		ft_itoa.c \
 		ft_strmapi.c \
 		ft_striteri.c \
-#		ft_strlcpy.c \
-
+		ft_strlcpy.c \
+		ft_strlcat.c \
 		
 OBJ = ${SRC:.c=.o}
 

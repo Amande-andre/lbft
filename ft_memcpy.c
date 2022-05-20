@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 15:12:20 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/15 14:05:30 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/20 12:10:29 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	s = (void *)src;
 	d = dest;
-	while (i < n)
+	while (i < n && src)
 	{
 		d[i] = s[i];
 		i++;
