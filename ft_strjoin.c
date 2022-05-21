@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:37:58 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/13 18:03:12 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/21 11:26:05 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);
-	str = ft_calloc(sizeof(char), lens1 + lens2 + 1);
+	str = (char *)malloc(sizeof(char) * (lens1 + lens2) + 1);
 	if (!str)
 		return (NULL);
 	ft_memcpy(str, s1, lens1);

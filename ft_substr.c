@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:36:03 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/20 16:02:30 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/21 11:14:45 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	i = 0;
-	if (!s || len <= 0)
+	if (s == NULL)
 		return (NULL);
 	if (start > (unsigned int)ft_strlen(s))
 		return (NULL);
-	if (len > ft_strlen(s) - start)
+	if (len > (unsigned int)ft_strlen(s) - start)
 		str = (char *)malloc(sizeof(char) * ft_strlen(s) - start + 1);
 	else
-		str = (char *)malloc(sizeof(char) * len + 1);
+		str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	while (s[start] && i < len)
@@ -38,17 +38,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-/*
 // #include <stdio.h>
 // int main()
 // {
 // 	char *str = strdup("0123456789");
-// 	char *s = ft_substr("42", 0, 0);
-// 	printf("\n%s\n\n", s);
+// 	char *s = ft_substr(str, 0, 15);
+// 	printf("%s\n", s);
 // 	if (s)
 // 		free (s);
 // 	if (str)
 // 		free (str);
 // 	return (0);
 // }
-*/
