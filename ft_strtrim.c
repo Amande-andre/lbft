@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:01:50 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/24 14:21:47 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/24 17:08:12 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1);
-	while (ft_strchr(set, s1[i]) && s1[i])
+	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	while (ft_strchr(set, s1[j]) && j > i)
 		j--;
