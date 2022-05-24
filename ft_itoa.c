@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:14:10 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/19 14:47:07 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/24 12:23:50 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_putnbr(long int n, size_t size)
 	char	*str;
 
 	i = 0;
-	str = ft_calloc(sizeof(char *), size + 1);
+	str = malloc(sizeof(char ) * size + 1);
 	if (!str)
 		return (NULL);
 	if (n < 0)

@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:37:58 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/21 11:26:05 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/24 12:34:36 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
+	char	*s;
 	size_t	lens1;
 	size_t	lens2;
 
@@ -23,18 +23,20 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (lens1 + lens2) + 1);
-	if (!str)
+	s = ft_calloc(sizeof(char), (lens1 + lens2) + 1);
+	if (!s)
 		return (NULL);
-	ft_memcpy(str, s1, lens1);
-	ft_memcpy(str + lens1, s2, lens2);
-	return (str);
+	ft_memcpy(s, s1, lens1);
+	ft_memcpy(s + lens1, s2, lens2);
+	s[ft_strlen(s)] = '\0';
+	return (s);
 }
 
-/*
-#include <stdio.h>
-int main()
-{
-	printf("%s\n", ft_strjoin("ceci", "est un test"));
-}
-*/
+// #include <stdio.h>
+// int main()
+// {
+// 	char *str = ft_strjoin("ceci", "est un test");
+// 	printf("%s", str);
+
+// 	free(str);
+// }
