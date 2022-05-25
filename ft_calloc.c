@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 17:37:06 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/24 12:58:59 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 16:04:25 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	ft_bzero(s, nmemb * size);
 	return (s);
-
 }

@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:39:15 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/20 16:03:50 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 16:04:50 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < ft_nbword(s, c))
 	{
-		while (s[j] && s[j] == c )
+		while (s[j] && s[j] == c)
 			j++;
 		while (s[j] != c && s[j])
 		{

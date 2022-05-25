@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:08:49 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/25 16:02:55 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 16:34:09 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	c = (unsigned char)c;
 	if (c > 256)
 		c %= 256;
-	if (n == 0)
-		return (NULL);
-	while (p[i] && i < n)
+	while (i < n)
 	{
 		if (p[i] == c)
-			return ((void *)p + i);
+			return (p + i);
 		i++;
 	}
-	return (NULL);
+	return 0;
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char s[7] = "012345";
+// 	printf("%s\n", (char *)ft_memchr(s, '2', 3));
+// 	printf("%s\n", (char *)memchr(s, '2', 3));
+
+// }

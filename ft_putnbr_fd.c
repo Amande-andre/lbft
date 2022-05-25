@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:44:24 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/18 13:09:52 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 16:05:30 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	nb = n;
 	if (n < 0)
 	{
-		nb *= - 1;
+		nb *= -1;
 		ft_putchar_fd('-', fd);
 	}	
 	if (nb >= 0 && nb <= 9)
@@ -30,7 +30,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nb % 10, fd);
 	}
 }
-
 
 // #include <stdio.h>
 // int main(int ac, char **av)
