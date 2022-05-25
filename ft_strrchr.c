@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:09:59 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/14 15:30:14 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 16:01:38 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 		c %= 256;
 	if (s[i] == c)
 		return ((char *)s + i);
-	while (i-- >= 0)
+	while (i >= 0)
 	{
 		if (s[i] == c)
 			return ((char *)s + i);
+		i--;
 	}
 	return (NULL);
 }

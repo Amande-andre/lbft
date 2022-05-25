@@ -6,20 +6,20 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:14:10 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/24 14:20:02 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 15:56:35 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_putnbr(long int n, size_t size)
+char	*ft_putnbr(long int n, long int size)
 {
-	size_t	nb;
-	int		i;
-	char	*str;
+	long int	nb;
+	long int	i;
+	char		*str;
 
 	i = 0;
-	str = ft_calloc(sizeof(char *), size + 1);
+	str = ft_calloc(sizeof(char), size + 2);
 	if (!str)
 		return (NULL);
 	if (n < 0)
@@ -40,21 +40,20 @@ char	*ft_putnbr(long int n, size_t size)
 
 char	*ft_itoa(int n)
 {
-	char	*a;
-	size_t	i;
-	size_t	nb;
+	char		*a;
+	long int	i;
+	long int	nb;
+	long int	n2;
 
 	i = 0;
-	n = (long int)n;
-	if (n == -2147483648)
-		return (a = "-2147483648");
-	if (n < 0)
+	n2 = n;
+	if (n2 < 0)
 	{
-		nb = n * -1;
+		nb = n2 * -1;
 		i++;
 	}
 	else
-		nb = n;
+		nb = n2;
 	while (nb >= 10)
 	{
 		nb = nb / 10;

@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:36:03 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/25 13:48:27 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 14:21:19 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == NULL)	
 		return (NULL);
 	if (start > (unsigned int)ft_strlen(s))
-		return (str = malloc(0));
+		return (str = ft_calloc(1, 1));
 	if (len > (unsigned int)ft_strlen(s) - start)
 		str = ft_calloc(sizeof(char), (ft_strlen(s) - start) + 1);
 	else

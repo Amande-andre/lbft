@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:08:49 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/24 11:37:10 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 16:02:55 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)p + i);
 		i++;
 	}
-	if (p[i] == c && c == '\0')
-		return ((void *)p + i);
 	return (NULL);
 }
