@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 18:01:50 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/24 17:08:12 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/25 12:37:26 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_strchr(set, s1[j]) && j > i)
 		j--;
 	s1 = (char *)s1 + i;
-	cpy = ft_calloc(sizeof(char *), (j - i) + 1);
+	if (!(ft_strlen(s1)))
+		return (ft_calloc(1, 1));
+	cpy = ft_calloc(sizeof(char), (j - i) + 2);
 	ft_memcpy(cpy, s1, (j - i) + 1);
 	return (cpy);
 }
