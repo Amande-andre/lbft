@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:39:15 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/25 16:04:50 by anmande          ###   ########.fr       */
+/*   Updated: 2022/05/30 16:12:44 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	k = 0;
 	splited = malloc(sizeof(char *) * (ft_nbword(s, c) + 1));
 	if (!(splited))
 		return (NULL);
 	while (i < ft_nbword(s, c))
 	{
+		k = 0;
 		while (s[j] && s[j] == c)
 			j++;
 		while (s[j] != c && s[j])
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 			k++;
 		}	
 		splited[i++] = ft_substr(s, j - k, k);
-		k = 0;
+		//	ft_free(splited);//free touts les tableau si null
 	}
 	splited[i] = NULL;
 	return (splited);

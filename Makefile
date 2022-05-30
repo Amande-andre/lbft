@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/20 12:08:10 by anmande          ###   ########.fr        #
+#    Updated: 2022/05/30 16:54:36 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ NAME = libft.a
 CC = clang
 
 CFLAGS = -Wall -Wextra -Werror
-
 
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
@@ -51,13 +50,22 @@ SRC =	ft_isalpha.c \
 		ft_striteri.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
+
+BONUS_SRC = ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			
 		
 OBJ = ${SRC:.c=.o}
+
+OBJ_BONUS = ${BONUS_SRC:.c=.o}
 
 all: $(NAME) #test
 
 $(NAME): ${OBJ}
 	ar -rcs ${NAME} ${OBJ}
+
+bonus:
+	ar -rcs ${NAME} ${OBJ_BONUS}
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
