@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:46:45 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/20 12:26:51 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/01 17:11:44 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	while (j < (size - len_dst - 1))
 		dst[i++] = src[j++];
 	dst[i] = '\0';
+	dst[++i] = '\0';
 	return (len_dst + len_src);
 }

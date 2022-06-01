@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 17:24:48 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/30 17:38:41 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/01 16:48:36 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	tmp;
+	t_list	*tmp;
 	
-	while (lst != NULL)
+	while (*lst != NULL)
 	{
-		tmp = lst;
-		ft_lstdelone(tmp, (*del)(tmp->content));
-		lst = lst->next;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
+	*lst = NULL;
 }

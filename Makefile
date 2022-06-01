@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/05/30 16:54:36 by anmande          ###   ########.fr        #
+#    Updated: 2022/06/01 14:20:45 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,14 @@ SRC =	ft_isalpha.c \
 
 BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstmap_bonus.c 
 			
-		
 OBJ = ${SRC:.c=.o}
 
 OBJ_BONUS = ${BONUS_SRC:.c=.o}
@@ -64,7 +70,7 @@ all: $(NAME) #test
 $(NAME): ${OBJ}
 	ar -rcs ${NAME} ${OBJ}
 
-bonus:
+bonus: ${OBJ_BONUS}
 	ar -rcs ${NAME} ${OBJ_BONUS}
 
 .c.o:
@@ -76,11 +82,7 @@ clean:
 fclean: clean
 	/bin/rm -f $(NAME)
 
-#test: all
-#	$(CC) $(CFLAGS) -c main.c
-#	$(CC) $(CFLAGS) main.o -L . -lft -o exec
-
-re: fclean all #test
+re: fclean all
 
 tclean:
 	rm exec

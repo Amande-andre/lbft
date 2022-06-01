@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:39:15 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/30 16:12:44 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/01 16:56:06 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ char	**ft_split(char const *s, char c)
 			k++;
 		}	
 		splited[i++] = ft_substr(s, j - k, k);
-		//	ft_free(splited);//free touts les tableau si null
 	}
 	splited[i] = NULL;
 	return (splited);
