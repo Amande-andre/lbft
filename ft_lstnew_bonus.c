@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 13:57:52 by anmande           #+#    #+#             */
-/*   Updated: 2022/06/01 14:06:45 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/02 13:15:32 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *new;
+	t_list	*new;
 
 	new = ft_calloc(sizeof(t_list), 1);
 	if (new == NULL)
