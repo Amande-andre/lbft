@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/06/02 17:45:54 by anmande          ###   ########.fr        #
+#    Updated: 2022/06/02 19:41:22 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,4 +87,4 @@ re: fclean all
 tclean:
 	rm exec
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean bonus re

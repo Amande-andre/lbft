@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 15:12:20 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/20 12:10:29 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/02 19:01:10 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	s = (void *)src;
 	d = dest;
+	if (dest == NULL)
+		return (NULL);
 	while (i < n && src)
 	{
 		d[i] = s[i];
@@ -29,22 +31,20 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char	dest[] = "jjjjjjjjjjjjjjjjjjjjj";
-	char	src[] = "zy\'\0\'xw\0vu\0\0tsr";
-	printf("%s\n", src);
-	size_t	size = sizeof (int);
-	char *tmp = strdup(dest);
-	char *tmp2 = strdup(dest);
-	char *i = ft_memcpy(tmp, src, 11);
-	char *i2 = memcpy(tmp2, src, 11);
-	printf("ft_ %s\nTru %s\n", i, i2);
-	free (tmp);
-	free (tmp2);
-}
-*/
+// #include <stdlib.h>
+// #include <stdio.h>
+// #include <string.h>
+// int	main()
+// {
+// 	char	*dest = "zy\'\0\'xw\0vu\0\0tsr";
+// 	char	*src = NULL; 
+// 	printf("%s\n", src);
+// 	size_t	size = sizeof (int);
+// 	char *tmp = strdup(dest);
+// 	char *tmp2 = strdup(dest);
+// 	char *i = ft_memcpy(tmp, src, 11);
+// 	char *i2 = memcpy(tmp2, src, 11);
+// 	printf("ft_ %s\nTru %s\n", i, i2);
+// 	free (tmp);
+// 	free (tmp2);
+// }

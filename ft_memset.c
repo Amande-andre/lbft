@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 16:02:39 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/18 11:59:08 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/02 19:29:22 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/*
-int main()
-{
-			printf("\nft_memset\n");
-	char tmpmemset[11] = "1234567890";
-	char *strmemset = strdup(tmpmemset);
-	char *imemset = ft_memset(strmemset, 'p', 1);
-	char *i2memset = memset(tmpmemset, 'p', 1);
-	printf("%s\n%s\n", imemset, i2memset);
-}
-*/
+// int main()
+// {
+// 	char *tmpmemset = NULL;
+// 	//char *strmemset = strdup(tmpmemset);
+// 	char *imemset = ft_memset(tmpmemset, 'p', 5);
+// 	printf("%s\n", imemset);
+// 	//char *i2memset = memset(tmpmemset, 't', 5);
+// 	//printf("%s\n", i2memset);
+// }

@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:22:13 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/12 17:31:24 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/02 18:18:52 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,10 @@ int	ft_atoi(const char *nptr)
 	return (n * sign);
 }
 
-/*
-#include <stdlib.h>
-#include <stdio.h>
-int main()
-{
-	printf("%d\n", ft_atoi("47:5"));
-	printf("%d\n", atoi("47:5"));
-}
-*/
+// #include <stdlib.h>
+// #include <stdio.h>
+// int main()
+// {
+// 	//printf("%d\n", ft_atoi(NULL));
+// 	printf("%d\n", atoi(NULL));
+// }

@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:08:49 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/30 11:44:35 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/02 18:49:40 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	p = (void *)s;
 	c = (unsigned char)c;
+	if (s == NULL)
+		return (NULL);
 	if (c > 256)
 		c %= 256;
 	while (i < n)
