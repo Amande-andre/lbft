@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 14:28:38 by anmande           #+#    #+#             */
-/*   Updated: 2022/06/02 13:15:54 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/02 13:27:50 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*tmp;
 
 	modified = ft_lstnew((*f)(lst->content));
+	if (modified == NULL)
+		return (NULL);
 	lst = lst->next;
 	tmp = modified;
 	while (lst != NULL)
