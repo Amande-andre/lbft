@@ -6,13 +6,13 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/06/01 14:20:45 by anmande          ###   ########.fr        #
+#    Updated: 2022/06/02 17:45:54 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = clang
+CC = gcc 
 
 CFLAGS = -Wall -Wextra -Werror
 

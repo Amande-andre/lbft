@@ -6,7 +6,7 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:44:24 by anmande           #+#    #+#             */
-/*   Updated: 2022/05/25 16:05:30 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/02 18:00:27 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 		nb *= -1;
 		ft_putchar_fd('-', fd);
 	}	
-	if (nb >= 0 && nb <= 9)
+	if (nb >= '0' && nb <= '9')
 		ft_putchar_fd(nb + '0', fd);
 	if (nb >= 10)
 	{
