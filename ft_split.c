@@ -6,11 +6,27 @@
 /*   By: anmande <anmande@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 14:39:15 by anmande           #+#    #+#             */
-/*   Updated: 2022/06/01 16:56:06 by anmande          ###   ########.fr       */
+/*   Updated: 2022/06/03 15:39:06 by anmande          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_freetab(char **splited, int n)
+{
+	if (splited[n] == NULL)
+	{
+		while (n >= 0)
+		{
+			free (splited[n]);
+			n--;
+		}		
+		free (splited);
+		return (NULL);
+	}
+	else
+		return (splited[n]);
+}
 
 static int	ft_nbword(const char *s, char c)
 {
@@ -50,15 +66,16 @@ char	**ft_split(char const *s, char c)
 		k = 0;
 		while (s[j] && s[j] == c)
 			j++;
-		while (s[j] != c && s[j])
+		while (s[j] && s[j] != c)
 		{
 			j++;
 			k++;
 		}	
 		splited[i++] = ft_substr(s, j - k, k);
+		if (!(ft_freetab(splited, i - 1)))
+			return (NULL);
 	}
-	splited[i] = NULL;
-	return (splited);
+	return (splited[i] = NULL, splited);
 }
 
 /*

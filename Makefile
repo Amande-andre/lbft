@@ -6,7 +6,7 @@
 #    By: anmande <anmande@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 10:36:29 by anmande           #+#    #+#              #
-#    Updated: 2022/06/02 19:41:22 by anmande          ###   ########.fr        #
+#    Updated: 2022/06/03 14:32:06 by anmande          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ OBJ = ${SRC:.c=.o}
 
 OBJ_BONUS = ${BONUS_SRC:.c=.o}
 
-all: $(NAME) #test
+all: $(NAME)
 
 $(NAME): ${OBJ}
 	ar -rcs ${NAME} ${OBJ}
